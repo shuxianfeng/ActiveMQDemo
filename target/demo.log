@@ -1,0 +1,512 @@
+[时间:2018-01-29 04:22:26] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization started] 
+ [时间:2018-01-29 04:22:27] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing Root WebApplicationContext: startup date [Mon Jan 29 16:22:27 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 04:22:27] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/applicationContext.xml]] 
+ [时间:2018-01-29 04:22:27] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/ActiveMQ.xml]] 
+ [时间:2018-01-29 04:22:28] [级别:WARN] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.jms.listener.DefaultMessageListenerContainer#0': Cannot create inner bean '(inner bean)#11570866' of type [org.springframework.jms.listener.adapter.MessageListenerAdapter] while setting bean property 'messageListener'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#11570866': Cannot resolve reference to bean 'queueReceiver1' while setting bean property 'delegate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'queueReceiver1' is defined] 
+ [时间:2018-01-29 04:22:28] [级别:ERROR] [类:org.springframework.web.context.ContextLoader]  [消息:Context initialization failed] 
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.jms.listener.DefaultMessageListenerContainer#0': Cannot create inner bean '(inner bean)#11570866' of type [org.springframework.jms.listener.adapter.MessageListenerAdapter] while setting bean property 'messageListener'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#11570866': Cannot resolve reference to bean 'queueReceiver1' while setting bean property 'delegate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'queueReceiver1' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:313)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1220)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5118)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5634)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:899)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:875)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1863)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:301)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:618)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:565)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:301)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:324)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#11570866': Cannot resolve reference to bean 'queueReceiver1' while setting bean property 'delegate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'queueReceiver1' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1475)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1220)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299)
+	... 60 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'queueReceiver1' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 66 more
+[时间:2018-01-29 04:31:56] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization started] 
+ [时间:2018-01-29 04:31:56] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing Root WebApplicationContext: startup date [Mon Jan 29 16:31:56 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 04:31:56] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/applicationContext.xml]] 
+ [时间:2018-01-29 04:31:57] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/ActiveMQ.xml]] 
+ [时间:2018-01-29 04:31:57] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Starting beans in phase 2147483647] 
+ [时间:2018-01-29 04:32:23] [级别:INFO] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:JMS message listener invoker needs to establish shared Connection] 
+ [时间:2018-01-29 04:32:44] [级别:INFO] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:JMS message listener invoker needs to establish shared Connection] 
+ [时间:2018-01-29 04:33:00] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:33:21] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:33:47] [级别:INFO] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:JMS message listener invoker needs to establish shared Connection] 
+ [时间:2018-01-29 04:34:03] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:34:24] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:34:45] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:35:06] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:35:27] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization completed in 211548 ms] 
+ [时间:2018-01-29 04:35:27] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization started] 
+ [时间:2018-01-29 04:35:27] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 16:35:27 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 04:35:27] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from class path resource [spring-mvc.xml]] 
+ [时间:2018-01-29 04:35:28] [级别:INFO] [类:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]  [消息:Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 16:35:27 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 04:35:28] [级别:INFO] [类:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]  [消息:Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 16:35:27 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 04:35:28] [级别:INFO] [类:org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]  [消息:Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'] 
+ [时间:2018-01-29 04:35:28] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization completed in 717 ms] 
+ [时间:2018-01-29 04:35:32] [级别:WARN] [类:org.springframework.web.servlet.PageNotFound]  [消息:No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'SpringMVC'] 
+ [时间:2018-01-29 04:35:32] [级别:INFO] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:JMS message listener invoker needs to establish shared Connection] 
+ [时间:2018-01-29 04:35:49] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:36:10] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:36:31] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:36:52] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:37:13] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:37:34] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:37:55] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:38:16] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:38:37] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:38:58] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=6, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:39:19] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:39:40] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:40:01] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:40:22] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=7, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:40:43] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:41:04] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=8, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:41:25] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=6, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:41:46] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:42:07] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=7, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:42:28] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=9, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:42:49] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:43:10] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=10, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:43:31] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=8, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:43:52] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:44:13] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=9, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:44:34] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=11, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:44:55] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=6, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:45:16] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=12, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:45:37] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=10, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:45:58] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:46:19] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=11, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:46:40] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=13, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:47:01] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=7, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:47:22] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=14, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:47:43] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=12, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:48:04] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:48:25] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=13, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:48:46] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=15, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:49:07] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=8, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:49:28] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=16, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:49:49] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=14, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:50:10] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=6, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:50:31] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=15, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:50:52] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=17, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:51:13] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=9, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:51:34] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=18, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:51:55] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=16, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:52:14] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 16:35:27 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 04:52:14] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Closing Root WebApplicationContext: startup date [Mon Jan 29 16:31:56 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 04:52:14] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Stopping beans in phase 2147483647] 
+ [时间:2018-01-29 04:52:16] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=7, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:52:37] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=17, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:52:58] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=19, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:53:19] [级别:ERROR] [类:org.springframework.jms.listener.DefaultMessageListenerContainer]  [消息:Could not refresh JMS Connection for destination 'test.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=10, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://192.168.3.3:61616. Reason: java.net.ConnectException: Connection timed out: connect] 
+ [时间:2018-01-29 04:55:21] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization started] 
+ [时间:2018-01-29 04:55:21] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing Root WebApplicationContext: startup date [Mon Jan 29 16:55:21 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 04:55:22] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/applicationContext.xml]] 
+ [时间:2018-01-29 04:55:22] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/ActiveMQ.xml]] 
+ [时间:2018-01-29 04:55:23] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Starting beans in phase 2147483647] 
+ [时间:2018-01-29 04:55:23] [级别:INFO] [类:org.springframework.jms.connection.CachingConnectionFactory]  [消息:Established shared JMS Connection: ActiveMQConnection {id=ID:git-55863-1517216123349-1:1,clientId=null,started=false}] 
+ [时间:2018-01-29 04:55:23] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization completed in 1725 ms] 
+ [时间:2018-01-29 04:55:23] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization started] 
+ [时间:2018-01-29 04:55:23] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 16:55:23 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 04:55:23] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from class path resource [spring-mvc.xml]] 
+ [时间:2018-01-29 04:55:24] [级别:INFO] [类:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]  [消息:Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 16:55:23 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 04:55:24] [级别:INFO] [类:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]  [消息:Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 16:55:23 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 04:55:24] [级别:INFO] [类:org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]  [消息:Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'] 
+ [时间:2018-01-29 04:55:24] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization completed in 873 ms] 
+ [时间:2018-01-29 04:55:29] [级别:WARN] [类:org.springframework.web.servlet.PageNotFound]  [消息:No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'SpringMVC'] 
+ [时间:2018-01-29 05:15:34] [级别:WARN] [类:org.springframework.web.servlet.PageNotFound]  [消息:No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'SpringMVC'] 
+ [时间:2018-01-29 05:24:12] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization started] 
+ [时间:2018-01-29 05:24:12] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing Root WebApplicationContext: startup date [Mon Jan 29 17:24:12 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 05:24:12] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/applicationContext.xml]] 
+ [时间:2018-01-29 05:24:13] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/ActiveMQ.xml]] 
+ [时间:2018-01-29 05:24:13] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Starting beans in phase 2147483647] 
+ [时间:2018-01-29 05:24:13] [级别:INFO] [类:org.springframework.jms.connection.CachingConnectionFactory]  [消息:Established shared JMS Connection: ActiveMQConnection {id=ID:git-57036-1517217853817-1:1,clientId=null,started=false}] 
+ [时间:2018-01-29 05:24:14] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization completed in 1533 ms] 
+ [时间:2018-01-29 05:24:14] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization started] 
+ [时间:2018-01-29 05:24:14] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:24:14 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:24:14] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from class path resource [spring-mvc.xml]] 
+ [时间:2018-01-29 05:24:14] [级别:INFO] [类:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]  [消息:Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:24:14 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:24:14] [级别:INFO] [类:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]  [消息:Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:24:14 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:24:14] [级别:INFO] [类:org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]  [消息:Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'] 
+ [时间:2018-01-29 05:24:14] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization completed in 689 ms] 
+ [时间:2018-01-29 05:24:19] [级别:WARN] [类:org.springframework.web.servlet.PageNotFound]  [消息:No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'SpringMVC'] 
+ [时间:2018-01-29 05:26:19] [级别:WARN] [类:org.springframework.web.servlet.PageNotFound]  [消息:No mapping found for HTTP request with URI [/activemq/queueSender] in DispatcherServlet with name 'SpringMVC'] 
+ [时间:2018-01-29 05:29:57] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:24:14 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:29:57] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Closing Root WebApplicationContext: startup date [Mon Jan 29 17:24:12 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 05:29:57] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Stopping beans in phase 2147483647] 
+ [时间:2018-01-29 05:30:15] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization started] 
+ [时间:2018-01-29 05:30:16] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing Root WebApplicationContext: startup date [Mon Jan 29 17:30:16 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 05:30:16] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/applicationContext.xml]] 
+ [时间:2018-01-29 05:30:16] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/ActiveMQ.xml]] 
+ [时间:2018-01-29 05:30:17] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Starting beans in phase 2147483647] 
+ [时间:2018-01-29 05:30:17] [级别:INFO] [类:org.springframework.jms.connection.CachingConnectionFactory]  [消息:Established shared JMS Connection: ActiveMQConnection {id=ID:git-57319-1517218217166-1:1,clientId=null,started=false}] 
+ [时间:2018-01-29 05:30:17] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization completed in 1380 ms] 
+ [时间:2018-01-29 05:30:17] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization started] 
+ [时间:2018-01-29 05:30:17] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:30:17 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:30:17] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from class path resource [spring-mvc.xml]] 
+ [时间:2018-01-29 05:30:17] [级别:WARN] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;] 
+ [时间:2018-01-29 05:30:17] [级别:ERROR] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:Context initialization failed] 
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1072)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5368)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5660)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:899)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:875)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1863)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:301)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:618)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:565)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:301)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:324)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:203)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:185)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:53)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$1.inspect(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.core.MethodIntrospector$1.doWith(MethodIntrospector.java:72)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:493)
+	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:214)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:191)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:125)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)
+	... 64 more
+[时间:2018-01-29 05:30:20] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization started] 
+ [时间:2018-01-29 05:30:20] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:30:20 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:30:20] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from class path resource [spring-mvc.xml]] 
+ [时间:2018-01-29 05:30:20] [级别:WARN] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;] 
+ [时间:2018-01-29 05:30:20] [级别:ERROR] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:Context initialization failed] 
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:134)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:958)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:452)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1087)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:203)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:185)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:53)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$1.inspect(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.core.MethodIntrospector$1.doWith(MethodIntrospector.java:72)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:493)
+	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:214)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:191)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:125)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)
+	... 34 more
+[时间:2018-01-29 05:32:03] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Closing Root WebApplicationContext: startup date [Mon Jan 29 17:30:16 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 05:32:03] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Stopping beans in phase 2147483647] 
+ [时间:2018-01-29 05:32:24] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization started] 
+ [时间:2018-01-29 05:32:24] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing Root WebApplicationContext: startup date [Mon Jan 29 17:32:24 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 05:32:24] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/applicationContext.xml]] 
+ [时间:2018-01-29 05:32:25] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/ActiveMQ.xml]] 
+ [时间:2018-01-29 05:32:25] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Starting beans in phase 2147483647] 
+ [时间:2018-01-29 05:32:26] [级别:INFO] [类:org.springframework.jms.connection.CachingConnectionFactory]  [消息:Established shared JMS Connection: ActiveMQConnection {id=ID:git-57428-1517218345906-1:1,clientId=null,started=false}] 
+ [时间:2018-01-29 05:32:26] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization completed in 1846 ms] 
+ [时间:2018-01-29 05:32:26] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization started] 
+ [时间:2018-01-29 05:32:26] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:32:26 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:32:26] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from class path resource [spring-mvc.xml]] 
+ [时间:2018-01-29 05:32:26] [级别:WARN] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;] 
+ [时间:2018-01-29 05:32:26] [级别:ERROR] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:Context initialization failed] 
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1072)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5368)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5660)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:899)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:875)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1863)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:301)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:618)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:565)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:301)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:324)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:203)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:185)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:53)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$1.inspect(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.core.MethodIntrospector$1.doWith(MethodIntrospector.java:72)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:493)
+	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:214)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:191)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:125)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)
+	... 64 more
+[时间:2018-01-29 05:32:29] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization started] 
+ [时间:2018-01-29 05:32:29] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:32:29 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:32:29] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from class path resource [spring-mvc.xml]] 
+ [时间:2018-01-29 05:32:29] [级别:WARN] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;] 
+ [时间:2018-01-29 05:32:29] [级别:ERROR] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:Context initialization failed] 
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1269)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1182)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:853)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:134)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:958)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:452)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1087)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchMethodError: org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation(Ljava/lang/reflect/AnnotatedElement;Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:203)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:185)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:53)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$1.inspect(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.core.MethodIntrospector$1.doWith(MethodIntrospector.java:72)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:493)
+	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:214)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:191)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:125)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568)
+	... 34 more
+[时间:2018-01-29 05:38:08] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization started] 
+ [时间:2018-01-29 05:38:08] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing Root WebApplicationContext: startup date [Mon Jan 29 17:38:08 CST 2018]; root of context hierarchy] 
+ [时间:2018-01-29 05:38:08] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/applicationContext.xml]] 
+ [时间:2018-01-29 05:38:09] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from URL [file:/F:/apache-tomcat-7.0.53/webapps/ROOT/WEB-INF/classes/ActiveMQ.xml]] 
+ [时间:2018-01-29 05:38:10] [级别:INFO] [类:org.springframework.context.support.DefaultLifecycleProcessor]  [消息:Starting beans in phase 2147483647] 
+ [时间:2018-01-29 05:38:10] [级别:INFO] [类:org.springframework.jms.connection.CachingConnectionFactory]  [消息:Established shared JMS Connection: ActiveMQConnection {id=ID:git-57868-1517218690158-1:1,clientId=null,started=false}] 
+ [时间:2018-01-29 05:38:10] [级别:INFO] [类:org.springframework.web.context.ContextLoader]  [消息:Root WebApplicationContext: initialization completed in 1673 ms] 
+ [时间:2018-01-29 05:38:10] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization started] 
+ [时间:2018-01-29 05:38:10] [级别:INFO] [类:org.springframework.web.context.support.XmlWebApplicationContext]  [消息:Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Jan 29 17:38:10 CST 2018]; parent: Root WebApplicationContext] 
+ [时间:2018-01-29 05:38:10] [级别:INFO] [类:org.springframework.beans.factory.xml.XmlBeanDefinitionReader]  [消息:Loading XML bean definitions from class path resource [spring-mvc.xml]] 
+ [时间:2018-01-29 05:38:11] [级别:INFO] [类:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]  [消息:Mapped "{[/activemq/queueSender],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.activemq.controller.ActivemqController.queueSender(java.lang.String)] 
+ [时间:2018-01-29 05:38:11] [级别:INFO] [类:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]  [消息:Mapped "{[/activemq/topicSender],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.activemq.controller.ActivemqController.topicSender(java.lang.String)] 
+ [时间:2018-01-29 05:38:11] [级别:INFO] [类:org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]  [消息:Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'] 
+ [时间:2018-01-29 05:38:11] [级别:INFO] [类:org.springframework.web.servlet.DispatcherServlet]  [消息:FrameworkServlet 'SpringMVC': initialization completed in 1202 ms] 
+ 
